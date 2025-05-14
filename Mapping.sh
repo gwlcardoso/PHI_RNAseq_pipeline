@@ -19,3 +19,14 @@ bowtie2 -x /home/gwlcardoso/RNAseq_ZC03_miseq/4.mapping/index_chimeric/index_chi
         -p 6 \\
         -S /home/gwlcardoso/RNAseq_ZC03_miseq/4.mapping/map_chimeric_${sample}.sam
 done
+
+#convert .sam to .bam by sort
+samtools view -bS "$input_sam" | samtools sort -o "$output_bam" 
+samtools index "$output_bam"
+
+#check alignment scores and etc. with qualimap
+qualimap bamqc -bam "/home/gwlcardoso/cold_phage/mapping/${bam_files}_chimeric.bam" \
+        -outdir "/home/gwlcardoso/cold_phage/mapping/qualimap/${bam_files}" \
+        -outfile "${bam_files}_qualimap_report" -outformat PDF
+
+
