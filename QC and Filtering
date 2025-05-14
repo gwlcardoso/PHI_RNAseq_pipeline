@@ -1,6 +1,0 @@
-#FASTQC to check reads quality from RNAseq.
-
-#Bash script 
-
-#check raw fastq files
-fastqc *.fastq.gz -o /path_to_output/ -t 6
