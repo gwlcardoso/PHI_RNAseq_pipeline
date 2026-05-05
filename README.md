@@ -10,7 +10,6 @@ These scripts were designed to investigate gene expression dynamics during phage
 This repository is intended to:
 - Provide transparent access to the analytical procedures used in the study
 - Enable reproducibility of key results
-- Serve as a reference framework for similar dual RNA-seq analyses
 - Allow flexible adaptation to different experimental designs
 
 The workflow is not fully automated, and some steps require manual execution and parameter tuning depending on the dataset.
@@ -25,13 +24,14 @@ The workflow is not fully automated, and some steps require manual execution and
 
 ## Analysis Structure
 
-1. Quality Control: Raw read assessment using FastQC and Summary reports with MultiQC
-2. Preprocessing: Adapter and low-quality trimming (Cutadapt and Fastp
-3. Alignment: Mapping reads to combined host + phage reference genomes (Bowtie2)
+1. Quality Control: Raw read assessment (FastQC and Summary reports with MultiQC)
+2. Preprocessing: Adapter and low-quality trimming (Cutadapt and Fastp)
+3. Alignment: Mapping reads to concatenated host and phage reference genomes (Bowtie2)
 4. Post-processing: SAM/BAM manipulation (Samtools)
 5. Quantification: Gene-level read counting (featureCounts)
-6. Differential Expression Analysis: Statistical analysis using DESeq2
-7. Functional Analysis: Pathway and enrichment analysis ( GO, KEGG - ClusterProfiler)
+6. Temporal Expression Analysis of Phage Genes: Identification and characterization of phage gene expression dynamics across infection time points (custom Python scripts)
+7. Differential Expression Analysis: Statistical analysis (DESeq2)
+8. Functional Analysis: Pathway and enrichment analysis ( GO, KEGG - ClusterProfiler)
 
 ## Usage
 
@@ -40,4 +40,5 @@ There is no single command to run the full analysis. Instead, scripts should be 
 ## Author
 
 Guilherme Wenceslau
-MSc in Bioinformatics – University of São Paulo (USP)
+
+MSc candidate in Bioinformatics – University of São Paulo (USP)
