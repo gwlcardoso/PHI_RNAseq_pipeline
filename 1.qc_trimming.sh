@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # ========================
 # Phage-host RNA-seq read quality control and trimming pipeline
 # Author: Guilherme Wenceslau
