@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # ========================
 # Gene counting with featureCounts
 # Author: Guilherme Wenceslau
