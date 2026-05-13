@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # ========================
 # RNA-seq mapping, coverage, and BigWig generation
 # Author: Guilherme Wenceslau
